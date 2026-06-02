@@ -1,472 +1,1253 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Camisa Premium Colombia Edición Nobel</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Camisa Premium Colombia Edición Nobel - $99.900 | Pago Contra Entrega</title>
+  <meta name="description" content="Camisa Colombia Edición Nobel™. Oferta: antes $150.000, ahora $99.900. Pago contra entrega y envío a todo Colombia." />
 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --azul:#003893;
+      --amarillo:#ffcc00;
+      --rojo:#d5001c;
+      --text:#0b1220;
+      --muted:#4b5563;
+      --bg:#070b15;
+      --card: rgba(255,255,255,.92);
+      --stroke: rgba(255,255,255,.14);
+      --shadow: 0 22px 70px rgba(0,0,0,.25);
+      --radius: 18px;
+      --radius2: 24px;
+    }
+    *{ box-sizing:border-box; }
+    html,body{ margin:0; padding:0; }
+    body{
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
+      background:
+        radial-gradient(1200px 600px at 20% -10%, rgba(255,204,0,.25), transparent 55%),
+        radial-gradient(900px 500px at 90% 0%, rgba(0,56,147,.25), transparent 55%),
+        #070b15;
+      color: #fff;
+      overflow-x:hidden;
+    }
+    img{ max-width:100%; display:block; }
+    a{ color:inherit; text-decoration:none; }
 
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Montserrat',sans-serif;
-}
+    .container{ width:min(1120px, 92%); margin:0 auto; }
 
-body{
-background:#fff;
-color:#222;
-overflow-x:hidden;
-}
+    /* Topbar */
+    .topbar{
+      position:sticky; top:0; z-index:100;
+      background: rgba(7,11,21,.72);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+    .topbar-inner{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:14px 0;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      font-weight:950; letter-spacing:.3px;
+      color:#fff;
+      min-width: 240px;
+    }
+    .brand-badge{
+      width:42px; height:42px; border-radius:14px;
+      background: linear-gradient(135deg, var(--amarillo), #ffe07a);
+      border: 1px solid rgba(255,255,255,.35);
+      display:flex; align-items:center; justify-content:center;
+      box-shadow: 0 18px 45px rgba(255,204,0,.22);
+      font-size:18px;
+    }
 
-.hero{
-background:linear-gradient(135deg,#001c54,#002f87);
-color:white;
-padding:40px 20px;
-}
+    .nav-quick{
+      display:flex; align-items:center; gap:10px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+    .nav-quick a{
+      font-size:14px; font-weight:850;
+      padding:8px 10px; border-radius:12px;
+      color: rgba(255,255,255,.85);
+      border: 1px solid transparent;
+      transition:.18s;
+      white-space:nowrap;
+    }
+    .nav-quick a:hover{
+      background: rgba(255,255,255,.08);
+      border-color: rgba(255,255,255,.16);
+      transform: translateY(-1px);
+    }
 
-.container{
-max-width:1200px;
-margin:auto;
-}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      padding:14px 18px;
+      border-radius:999px;
+      font-weight:1000;
+      border:1px solid rgba(255,255,255,.16);
+      transition: transform .15s ease, filter .2s ease, background .2s ease, border .2s ease;
+      user-select:none;
+      white-space:nowrap;
+    }
+    .btn:active{ transform: translateY(1px); }
+    .btn-primary{
+      background: linear-gradient(135deg, var(--rojo), #ff2d55);
+      border-color: rgba(255,255,255,.22);
+      box-shadow: 0 18px 45px rgba(213,0,28,.35);
+    }
+    .btn-primary:hover{ filter: brightness(1.05); transform: translateY(-1px); }
+    .btn-outline{
+      background: rgba(255,255,255,.08);
+      border-color: rgba(255,255,255,.18);
+    }
+    .btn-outline:hover{ background: rgba(255,255,255,.12); transform: translateY(-1px); }
+    .btn-dark{
+      background: rgba(0,0,0,.22);
+      border-color: rgba(255,255,255,.14);
+    }
 
-.hero-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:40px;
-align-items:center;
-}
+    /* Hero */
+    .hero{ padding: 24px 0 12px; }
+    .hero-grid{
+      display:grid; grid-template-columns: 1.15fr .85fr;
+      gap:16px; align-items:stretch;
+    }
+    @media (max-width: 980px){
+      .hero-grid{ grid-template-columns: 1fr; }
+      .nav-quick{ justify-content:flex-start; }
+      .brand{ min-width: unset; }
+    }
 
-.hero h1{
-font-size:60px;
-font-weight:900;
-line-height:1;
-margin-bottom:15px;
-}
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.02));
+      border:1px solid rgba(255,255,255,.14);
+      border-radius: var(--radius2);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+      position:relative;
+    }
 
-.hero h1 span{
-color:#ffd400;
-}
+    .hero-banner{
+      min-height: 520px;
+      background:#0b1220;
+      position:relative;
+    }
+    .hero-banner img{
+      width:100%; height:100%;
+      object-fit:cover;
+      filter: saturate(1.05) contrast(1.02);
+      transform: scale(1.01);
+    }
+    .hero-banner .shade{
+      position:absolute; inset:0;
+      background: linear-gradient(90deg, rgba(7,11,21,.88) 0%, rgba(7,11,21,.40) 52%, rgba(7,11,21,.65) 100%);
+    }
+    .hero-banner .content{
+      position:absolute; inset:0;
+      display:flex; flex-direction:column;
+      justify-content:space-between;
+      padding: 22px;
+      gap:12px;
+    }
 
-.hero p{
-font-size:20px;
-margin-bottom:25px;
-}
+    .kicker{
+      display:inline-flex; align-items:center; gap:10px;
+      padding:9px 12px;
+      border-radius:999px;
+      background: rgba(255,255,255,.10);
+      border:1px solid rgba(255,255,255,.18);
+      font-weight:950;
+      width:fit-content;
+    }
+    .hero-title{
+      margin:0;
+      font-size: clamp(28px, 3.4vw, 46px);
+      line-height:1.05;
+      letter-spacing:-.7px;
+      font-weight:1100;
+      text-shadow: 0 18px 50px rgba(0,0,0,.45);
+    }
+    .hero-sub{
+      margin: 10px 0 0;
+      color: rgba(255,255,255,.88);
+      font-weight:850;
+      line-height:1.45;
+      max-width: 620px;
+      font-size:15px;
+    }
+    .hero-actions{
+      display:flex; gap:12px; flex-wrap:wrap;
+      align-items:center;
+      margin-top: 16px;
+    }
 
-.price-box{
-background:white;
-padding:20px;
-border-radius:15px;
-display:inline-block;
-margin-bottom:25px;
-}
+    /* Offer / Right column */
+    .offer{
+      padding: 18px;
+      display:flex; flex-direction:column;
+      gap:14px;
+      background: linear-gradient(180deg, rgba(255,255,255,.10), rgba(255,255,255,.02));
+    }
+    .offer .offer-box{
+      background: rgba(255,255,255,.95);
+      color: var(--text);
+      border-radius: var(--radius);
+      border: 1px solid rgba(0,0,0,.06);
+      padding: 18px;
+      box-shadow: 0 22px 70px rgba(0,0,0,.22);
+      position:relative;
+      overflow:hidden;
+    }
+    .offer .offer-box:before{
+      content:"";
+      position:absolute; inset:-2px;
+      background:
+        radial-gradient(800px 220px at 25% 0%, rgba(255,204,0,.52), transparent 60%),
+        radial-gradient(700px 260px at 92% 8%, rgba(213,0,28,.28), transparent 55%);
+      pointer-events:none;
+    }
+    .offer .offer-box > *{ position:relative; }
 
-.old-price{
-font-size:24px;
-text-decoration:line-through;
-color:#888;
-}
+    .badge-hot{
+      display:inline-flex; align-items:center; gap:8px;
+      background: linear-gradient(135deg, var(--amarillo), #fff0b3);
+      border: 1px solid rgba(0,0,0,.06);
+      color: #111827;
+      font-weight:1100;
+      padding: 8px 12px;
+      border-radius:999px;
+      width:fit-content;
+    }
 
-.new-price{
-font-size:48px;
-font-weight:900;
-color:#e30613;
-}
+    .price-row{
+      display:flex; align-items:baseline; justify-content:space-between;
+      gap:12px; flex-wrap:wrap;
+      margin-top: 10px;
+    }
+    .old{
+      text-decoration: line-through;
+      color: #6b7280;
+      font-weight:950;
+      font-size: 16px;
+    }
+    .now{
+      color: var(--rojo);
+      font-weight:1200;
+      font-size: 44px;
+      letter-spacing:-1px;
+      line-height:1;
+    }
+    .offer .offer-note{
+      margin-top: 8px;
+      color: #374151;
+      font-weight:900;
+      line-height:1.45;
+      font-size: 14px;
+    }
 
-.discount{
-background:#e30613;
-color:white;
-padding:8px 15px;
-border-radius:50px;
-display:inline-block;
-font-weight:700;
-margin-top:10px;
-}
+    .cod-pill{
+      display:flex; align-items:flex-start; gap:10px;
+      padding: 12px 14px;
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.08);
+      color: rgba(255,255,255,.92);
+      font-weight:900;
+    }
+    .cod-pill .dot{
+      width:36px; height:36px; border-radius:14px;
+      background: rgba(255,204,0,.20);
+      border: 1px solid rgba(255,204,0,.35);
+      display:flex; align-items:center; justify-content:center;
+      font-size:18px;
+    }
 
-.btn{
-display:inline-block;
-padding:18px 35px;
-background:#ffd400;
-color:#001c54;
-font-size:22px;
-font-weight:900;
-text-decoration:none;
-border-radius:60px;
-transition:.3s;
-margin-top:15px;
-}
+    .countdown{
+      display:flex; flex-wrap:wrap; gap:10px;
+      margin-top: 2px;
+    }
+    .timebox{
+      background: rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.14);
+      border-radius: 14px;
+      padding: 10px 12px;
+      min-width: 92px;
+      text-align:center;
+    }
+    .timebox strong{
+      display:block; font-size: 20px; font-weight:1200;
+      color:#fff;
+    }
+    .timebox span{
+      font-size: 12px; font-weight:900;
+      color: rgba(255,255,255,.78);
+    }
 
-.btn:hover{
-transform:scale(1.05);
-}
+    /* Sections */
+    section{ padding: 18px 0; }
+    .section-title{
+      margin:0 0 6px;
+      font-size: 26px;
+      font-weight:1100;
+      letter-spacing:-.4px;
+    }
+    .section-sub{
+      margin:0 0 14px;
+      color: rgba(255,255,255,.82);
+      font-weight:850;
+      line-height:1.5;
+      max-width: 760px;
+    }
 
-.hero img{
-width:100%;
-border-radius:20px;
-}
+    .grid-3{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+    @media (max-width: 980px){
+      .grid-3{ grid-template-columns: 1fr; }
+    }
 
-.badges{
-background:#ffd400;
-padding:15px;
-text-align:center;
-font-weight:800;
-color:#001c54;
-font-size:18px;
-}
+    .feature{
+      background: rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.14);
+      border-radius: 18px;
+      padding: 14px;
+      min-height: 120px;
+      display:flex;
+      gap:12px;
+      align-items:flex-start;
+    }
+    .feature .ico{
+      width:42px; height:42px; border-radius:16px;
+      display:flex; align-items:center; justify-content:center;
+      border: 1px solid rgba(255,204,0,.30);
+      background: rgba(255,204,0,.16);
+      font-size: 18px;
+      flex: 0 0 auto;
+    }
+    .feature h3{
+      margin:0;
+      font-weight:1100;
+      font-size: 15px;
+    }
+    .feature p{
+      margin:6px 0 0;
+      color: rgba(255,255,255,.80);
+      font-weight:850;
+      line-height:1.45;
+      font-size: 13.5px;
+    }
 
-.badges span{
-margin:0 15px;
-display:inline-block;
-}
+    /* Image + bullets */
+    .split{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      align-items:stretch;
+    }
+    @media (max-width: 980px){ .split{ grid-template-columns: 1fr; } }
 
-.section{
-padding:70px 20px;
-}
+    .img-card{
+      border-radius: var(--radius2);
+      overflow:hidden;
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.06);
+      position:relative;
+      min-height: 360px;
+    }
+    .img-card img{
+      width:100%; height:100%;
+      object-fit: cover;
+      filter: saturate(1.02) contrast(1.02);
+    }
+    .img-card .img-shade{
+      position:absolute; inset:0;
+      background: linear-gradient(180deg, rgba(7,11,21,.05), rgba(7,11,21,.55));
+      pointer-events:none;
+    }
 
-.title{
-text-align:center;
-font-size:42px;
-font-weight:900;
-color:#001c54;
-margin-bottom:20px;
-}
+    .bullets{
+      background: rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.14);
+      border-radius: var(--radius2);
+      padding: 16px;
+    }
+    .bullets ul{
+      margin: 10px 0 0;
+      padding: 0;
+      list-style:none;
+      display:grid; gap:10px;
+    }
+    .bullets li{
+      display:flex; gap:10px; align-items:flex-start;
+      color: rgba(255,255,255,.88);
+      font-weight:900;
+      line-height:1.45;
+    }
+    .check{
+      width:22px; height:22px;
+      border-radius: 8px;
+      background: rgba(255,204,0,.20);
+      border: 1px solid rgba(255,204,0,.35);
+      display:flex; align-items:center; justify-content:center;
+      margin-top:1px;
+      flex: 0 0 auto;
+      font-size: 12px;
+    }
 
-.subtitle{
-text-align:center;
-max-width:900px;
-margin:auto;
-font-size:20px;
-margin-bottom:50px;
-}
+    /* Steps */
+    .steps{
+      background: rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.14);
+      border-radius: var(--radius2);
+      padding: 16px;
+    }
+    .steps-grid{
+      display:grid; gap:12px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (max-width: 980px){ .steps-grid{ grid-template-columns: 1fr; } }
+    .step{
+      background: rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.12);
+      border-radius: 18px;
+      padding: 14px;
+    }
+    .step .n{
+      width:34px; height:34px; border-radius: 14px;
+      background: rgba(255,204,0,.18);
+      border:1px solid rgba(255,204,0,.33);
+      display:flex; align-items:center; justify-content:center;
+      font-weight:1200;
+      margin-bottom:10px;
+    }
+    .step h3{ margin:0; font-size:15px; font-weight:1100; }
+    .step p{ margin:6px 0 0; color: rgba(255,255,255,.80); font-weight:850; line-height:1.45; font-size:13.5px; }
 
-.features{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:25px;
-}
+    /* Order form */
+    .order-wrap{
+      background: rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.14);
+      border-radius: var(--radius2);
+      padding: 16px;
+    }
+    .order-grid{
+      display:grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap:14px;
+      align-items:start;
+    }
+    @media (max-width: 980px){ .order-grid{ grid-template-columns: 1fr; } }
 
-.feature{
-background:#f8f8f8;
-padding:25px;
-border-radius:15px;
-text-align:center;
-box-shadow:0 5px 15px rgba(0,0,0,.08);
-}
+    .form{
+      background: rgba(255,255,255,.95);
+      border-radius: var(--radius2);
+      padding: 16px;
+      color: var(--text);
+      border:1px solid rgba(0,0,0,.06);
+      box-shadow: 0 22px 70px rgba(0,0,0,.20);
+    }
+    .form h2{
+      margin:0 0 8px;
+      font-size: 20px;
+      font-weight:1200;
+      letter-spacing:-.2px;
+    }
+    .form p{
+      margin:0 0 14px;
+      color:#374151;
+      font-weight:850;
+      line-height:1.5;
+      font-size: 13.5px;
+    }
 
-.feature h3{
-color:#e30613;
-margin-bottom:10px;
-}
+    .field-row{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:12px;
+    }
+    @media (max-width: 680px){ .field-row{ grid-template-columns:1fr; } }
 
-.gallery{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:25px;
-}
+    .field{
+      display:flex; flex-direction:column; gap:8px;
+      margin-bottom: 12px;
+    }
+    label{
+      font-weight:1000;
+      color:#111827;
+      font-size: 13px;
+    }
+    input, select, textarea{
+      padding: 12px 12px;
+      border-radius: 14px;
+      border:1px solid rgba(0,0,0,.10);
+      outline:none;
+      font-weight:900;
+      background:#fff;
+      color:#111827;
+    }
+    textarea{ min-height: 92px; resize: vertical; }
 
-.gallery img{
-width:100%;
-border-radius:20px;
-box-shadow:0 8px 20px rgba(0,0,0,.15);
-}
+    .size-grid{
+      display:flex; flex-wrap:wrap; gap:10px;
+      margin-top: 6px;
+    }
+    .size{
+      border-radius: 999px;
+      border:1px solid rgba(0,0,0,.12);
+      background:#fff;
+      padding: 10px 12px;
+      font-weight:1100;
+      cursor:pointer;
+      transition:.15s;
+      user-select:none;
+    }
+    .size:hover{ transform: translateY(-1px); }
+    .size.active{
+      background: linear-gradient(135deg, var(--azul), #1e40ff);
+      border-color: rgba(255,255,255,.30);
+      color:#fff;
+    }
 
-.highlight{
-background:#001c54;
-color:white;
-text-align:center;
-}
+    .qty-row{
+      display:flex; gap:12px; align-items:center;
+    }
+    .qty-row input{
+      width: 120px;
+      text-align:center;
+    }
 
-.highlight h2{
-color:#ffd400;
-font-size:50px;
-margin-bottom:20px;
-}
+    .form-actions{
+      display:flex; gap:12px; flex-wrap:wrap;
+      margin-top: 10px;
+      align-items:center;
+    }
+    .small-note{
+      color:#6b7280;
+      font-weight:850;
+      font-size: 12.5px;
+      line-height:1.45;
+      margin-top: 10px;
+    }
 
-.highlight p{
-max-width:900px;
-margin:auto;
-font-size:22px;
-}
+    .summary{
+      background: rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.14);
+      border-radius: var(--radius2);
+      padding: 14px;
+    }
+    .summary h3{
+      margin:0 0 10px;
+      font-weight:1200;
+      letter-spacing:-.2px;
+      font-size: 16px;
+      color:#fff;
+    }
+    .sum-line{
+      display:flex; justify-content:space-between; gap:12px;
+      margin: 10px 0;
+      font-weight:1000;
+      color: rgba(255,255,255,.92);
+    }
+    .sum-line span:last-child{ color:#fff; }
+    .divider{
+      height:1px; background: rgba(255,255,255,.14);
+      margin: 12px 0;
+    }
+    .sum-total{
+      font-size: 22px;
+      font-weight:1300;
+    }
+    .sum-badge{
+      margin-top: 10px;
+      background: rgba(255,204,0,.18);
+      border: 1px solid rgba(255,204,0,.35);
+      color: rgba(255,255,255,.96);
+      padding: 10px 12px;
+      border-radius: 16px;
+      font-weight:950;
+      line-height:1.45;
+      font-size: 13.5px;
+    }
 
-.benefits-list{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:20px;
-max-width:1000px;
-margin:auto;
-}
+    /* Success */
+    .success{
+      display:none;
+      background: rgba(255,255,255,.95);
+      border-radius: var(--radius2);
+      padding: 16px;
+      border:1px solid rgba(0,0,0,.06);
+      box-shadow: 0 22px 70px rgba(0,0,0,.20);
+      color: var(--text);
+    }
+    .success.active{ display:block; }
+    .success h2{ margin:0; font-weight:1300; letter-spacing:-.3px; }
+    .success p{ margin:10px 0 0; color:#374151; font-weight:850; line-height:1.5; }
+    .order-code{
+      margin-top: 12px;
+      display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap;
+      background: rgba(0,56,147,.08);
+      border:1px solid rgba(0,56,147,.20);
+      padding: 12px 12px;
+      border-radius: 16px;
+      font-weight:1200;
+    }
 
-.benefit{
-background:white;
-padding:25px;
-border-radius:15px;
-box-shadow:0 5px 15px rgba(0,0,0,.1);
-font-size:18px;
-font-weight:600;
-}
+    /* Footer */
+    footer{
+      padding: 26px 0 42px;
+      color: rgba(255,255,255,.72);
+      font-weight:850;
+      font-size: 13px;
+      text-align:center;
+    }
 
-.offer{
-background:#ffd400;
-text-align:center;
-}
+    /* Floating CTA */
+    .floating{
+      position:fixed;
+      right:14px; bottom:14px;
+      z-index:200;
+      display:flex; gap:10px; align-items:center;
+    }
+    @media (max-width: 680px){
+      .floating{ left: 14px; right: 14px; justify-content: center; }
+      .floating .pill{ display:none; }
+    }
+    .pill{
+      background: rgba(255,255,255,.95);
+      color:#111827;
+      border-radius: 999px;
+      border:1px solid rgba(0,0,0,.06);
+      padding: 10px 12px;
+      box-shadow: 0 18px 55px rgba(0,0,0,.25);
+      display:flex; align-items:center; gap:10px;
+      max-width: 320px;
+      font-weight:1000;
+    }
+    .pill strong{ font-size:16px; }
+    .pill span{ color:#6b7280; font-weight:900; font-size:12px; white-space:nowrap; }
 
-.offer h2{
-font-size:60px;
-color:#e30613;
-font-weight:900;
-}
-
-.offer .new-price{
-font-size:70px;
-}
-
-.cta-box{
-background:white;
-max-width:700px;
-margin:auto;
-padding:40px;
-border-radius:20px;
-box-shadow:0 10px 25px rgba(0,0,0,.15);
-}
-
-.footer{
-background:#111;
-color:white;
-padding:30px;
-text-align:center;
-}
-
-.sticky-btn{
-position:fixed;
-bottom:15px;
-left:50%;
-transform:translateX(-50%);
-background:#25D366;
-color:white;
-padding:15px 30px;
-border-radius:50px;
-font-weight:900;
-text-decoration:none;
-z-index:999;
-box-shadow:0 5px 20px rgba(0,0,0,.3);
-}
-
-@media(max-width:768px){
-
-.hero-grid{
-grid-template-columns:1fr;
-}
-
-.hero h1{
-font-size:40px;
-}
-
-.features{
-grid-template-columns:1fr;
-}
-
-.gallery{
-grid-template-columns:1fr;
-}
-
-.benefits-list{
-grid-template-columns:1fr;
-}
-
-.offer h2{
-font-size:40px;
-}
-
-.offer .new-price{
-font-size:50px;
-}
-}
-</style>
+    /* Smooth scroll */
+    html{ scroll-behavior:smooth; }
+  </style>
 </head>
 
 <body>
+  <!-- TOPBAR -->
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div class="brand">
+        <div class="brand-badge">🇨🇴</div>
+        <div>CAMISA COLOMBIA <span style="opacity:.85">Edición Nobel™</span></div>
+      </div>
 
-<a class="sticky-btn" href="https://wa.me/57TU_NUMERO?text=Hola,%20quiero%20comprar%20la%20Camisa%20Premium%20Colombia%20Edición%20Nobel">
-📲 PEDIR POR WHATSAPP
-</a>
+      <div class="nav-quick" aria-label="Navegación rápida">
+        <a href="#beneficios">Beneficios</a>
+        <a href="#detalles">Detalles</a>
+        <a href="#como-funciona">Pago contra entrega</a>
+        <a href="#ordenar" class="btn btn-primary" style="padding:10px 14px;">🔥 Ordenar ahora</a>
+      </div>
+    </div>
+  </div>
 
-<section class="hero">
+  <!-- HERO -->
+  <main class="hero">
+    <div class="container hero-grid">
+      <!-- Left: banner -->
+      <div class="card hero-banner">
+        <img src="img-hero.jpg" alt="Camisa Colombia Edición Nobel en estadio - viste la pasión" />
+        <div class="shade"></div>
+        <div class="content">
+          <div>
+            <div class="kicker">⚽ Rumbo al Mundial 2026 • Edición limitada</div>
+            <h1 class="hero-title">¡Orgullo colombiano en cada jugada!</h1>
+            <p class="hero-sub">
+              La <b>Camisa Colombia Edición Nobel™</b> está pensada para quienes viven el fútbol como identidad.
+              Cómoda, premium y lista para acompañarte en partidos, viajes y celebraciones.
+            </p>
 
-<div class="container">
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#ordenar">✅ Pedir con pago contra entrega</a>
+              <a class="btn btn-outline" href="#detalles">🎯 Ver detalles premium</a>
+            </div>
+          </div>
 
-<div class="hero-grid">
+          <div>
+            <div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center;">
+              <div class="kicker" style="background: rgba(255,255,255,.08);">
+                🏷️ Oferta por tiempo limitado
+              </div>
+              <div style="flex:1"></div>
+            </div>
 
-<div>
+            <div class="countdown" aria-label="Cuenta regresiva (demo)">
+              <div class="timebox">
+                <strong id="t-h">--</strong>
+                <span>Horas</span>
+              </div>
+              <div class="timebox">
+                <strong id="t-m">--</strong>
+                <span>Min</span>
+              </div>
+              <div class="timebox">
+                <strong id="t-s">--</strong>
+                <span>Seg</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-<div style="background:#e30613;padding:10px 20px;border-radius:50px;display:inline-block;font-weight:800;margin-bottom:20px;">
-🔥 OFERTA MUNDIALISTA LIMITADA
-</div>
+      <!-- Right: offer + product -->
+      <div class="card offer">
+        <div class="offer-box">
+          <div class="badge-hot">🔥 AHORA EN OFERTA</div>
 
-<h1>
-CAMISA PREMIUM<br>
-<span>COLOMBIA</span><br>
-EDICIÓN NOBEL 🇨🇴
-</h1>
+          <div class="price-row">
+            <div>
+              <div class="old">Precio antes: $150.000</div>
+            </div>
+            <div class="now">$99.900</div>
+          </div>
 
-<p>
-Vive cada partido con orgullo. Diseñada para los verdaderos aficionados que sienten a Colombia en el corazón.
-</p>
+          <div class="offer-note">
+            <b>Pago contra entrega</b> • Confirmación inmediata de tu pedido.<br/>
+            <span style="color:#111827; font-weight:1000;">Edición limitada para verdaderos aficionados.</span>
+          </div>
 
-<div class="price-box">
-<div class="old-price">$150.000</div>
-<div class="new-price">$99.900</div>
-<div class="discount">AHORRA $50.100</div>
-</div>
+          <div style="height:12px"></div>
 
-<p>
-✅ Pago Contra Entrega<br>
-✅ Envíos a Toda Colombia<br>
-✅ Calidad Premium Garantizada
-</p>
+          <a class="btn btn-primary" style="width:100%; padding:14px 16px;" href="#ordenar">
+            ✅ Comprar ahora por $99.900
+          </a>
 
-<a class="btn" href="https://wa.me/57TU_NUMERO?text=Hola,%20quiero%20comprar%20la%20Camisa%20Premium%20Colombia%20Edición%20Nobel">
-⚽ QUIERO LA MÍA AHORA
-</a>
+          <div class="small-note">
+            *Al enviar tu pedido te generamos un código para seguimiento. Nosotros te contactamos para confirmar talla y dirección.
+          </div>
+        </div>
 
-</div>
+        <div class="cod-pill">
+          <div class="dot">💳</div>
+          <div>
+            <div style="font-weight:1200; color:#fff;">Pago contra entrega</div>
+            <div style="color:rgba(255,255,255,.85); font-weight:900; margin-top:3px;">
+              Paga cuando recibas. Sin pagos adelantados.
+            </div>
+          </div>
+        </div>
 
-<div>
-<img src="imagen1.jpg" alt="Camisa Colombia">
-</div>
+        <div class="product-preview" style="border-radius: var(--radius2); overflow:hidden; border:1px solid rgba(255,255,255,.14);">
+          <img src="img-producto.jpg" alt="Camisa Colombia Edición Nobel - foto del producto" style="width:100%; height:320px; object-fit:contain; background:#fff;" />
+        </div>
 
-</div>
+        <a class="btn btn-outline" href="#ordenar" style="width:100%; justify-content:space-between;">
+          <span>🚀 Ordenar en 1 minuto</span>
+          <span style="opacity:.85;">→</span>
+        </a>
+      </div>
+    </div>
+  </main>
 
-</div>
+  <!-- BENEFICIOS -->
+  <section id="beneficios">
+    <div class="container">
+      <h2 class="section-title">Por qué te vas a enamorar de esta camiseta</h2>
+      <p class="section-sub">
+        Diseñada para verte top y sentirte cómodo en cada momento. Edición premium, lista para el Mundial 2026.
+      </p>
 
-</section>
+      <div class="grid-3">
+        <div class="feature">
+          <div class="ico">🛡️</div>
+          <div>
+            <h3>Escudo bordado máxima durabilidad</h3>
+            <p>Para que el detalle se mantenga perfecto partido tras partido.</p>
+          </div>
+        </div>
 
-<div class="badges">
-<span>✅ Pago Contra Entrega</span>
-<span>✅ Tela Premium</span>
-<span>✅ Escudo Bordado</span>
-<span>✅ Envío Nacional</span>
-</div>
+        <div class="feature">
+          <div class="ico">🌬️</div>
+          <div>
+            <h3>Tela transpirante fresca en cada movimiento</h3>
+            <p>Te mantiene cómodo incluso en los días de más calor.</p>
+          </div>
+        </div>
 
-<section class="section">
+        <div class="feature">
+          <div class="ico">🎨</div>
+          <div>
+            <h3>Diseño auténtico que se nota</h3>
+            <p>Colores y estilo premium para representar con orgullo.</p>
+          </div>
+        </div>
+      </div>
 
-<h2 class="title">MÁS QUE UNA CAMISETA, ES TU IDENTIDAD</h2>
+      <div style="height:14px"></div>
 
-<p class="subtitle">
-Cuando juega Colombia no es solo fútbol. Es emoción, orgullo, pasión y la ilusión de millones de colombianos que sueñan con la gloria.
-</p>
+      <div class="grid-3">
+        <div class="feature">
+          <div class="ico">⚡</div>
+          <div>
+            <h3>Acabados premium</h3>
+            <p>Costuras reforzadas para mayor resistencia y durabilidad.</p>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="ico">💥</div>
+          <div>
+            <h3>Ideal para ver, viajar y celebrar</h3>
+            <p>Se adapta a tu plan: estadio, calle o reunión en familia.</p>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="ico">🔥</div>
+          <div>
+            <h3>Edición limitada</h3>
+            <p>Si te gusta el fútbol como cultura, esta es para ti.</p>
+          </div>
+        </div>
+      </div>
 
-<div class="features">
+      <div style="height:14px"></div>
 
-<div class="feature">
-<h3>⚽ Diseño Exclusivo</h3>
-<p>Inspirado en la pasión de todo un país.</p>
-</div>
+      <div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center;">
+        <a class="btn btn-primary" href="#ordenar">🔥 Sí, quiero mi Camisa por $99.900</a>
+        <a class="btn btn-outline" href="#detalles">👀 Ver detalles premium</a>
+      </div>
+    </div>
+  </section>
 
-<div class="feature">
-<h3>🔥 Tela Transpirable</h3>
-<p>Máxima frescura y comodidad.</p>
-</div>
+  <!-- DETALLES (IMAGEN) -->
+  <section id="detalles">
+    <div class="container">
+      <div class="split">
+        <div class="img-card">
+          <img src="img-detalles.jpg" alt="Detalles premium: escudo bordado, tela transpirante y diseño auténtico" />
+          <div class="img-shade"></div>
+        </div>
 
-<div class="feature">
-<h3>🏆 Calidad Premium</h3>
-<p>Material resistente y duradero.</p>
-</div>
+        <div class="bullets">
+          <h2 class="section-title" style="margin-top:0;">Detalles que se sienten premium</h2>
+          <p class="section-sub" style="margin-bottom:10px;">
+            Diseño, textura y acabados hechos para durar. Perfecta para los que no usan “cualquier camiseta”.
+          </p>
 
-<div class="feature">
-<h3>🇨🇴 Edición Especial</h3>
-<p>Perfecta para verdaderos aficionados.</p>
-</div>
+          <ul>
+            <li><div class="check">✓</div> Escudo bordado y máximo enfoque en durabilidad.</li>
+            <li><div class="check">✓</div> Tela transpirante para comodidad real en todo el día.</li>
+            <li><div class="check">✓</div> Colores y estilo auténticos que representan.</li>
+            <li><div class="check">✓</div> Acabados premium y costuras reforzadas.</li>
+          </ul>
 
-</div>
+          <div style="height:14px"></div>
 
-</section>
+          <a class="btn btn-primary" style="width:100%;" href="#ordenar">
+            ✅ Ordenar con pago contra entrega
+          </a>
+          <div class="small-note" style="color:#cbd5e1; background: rgba(0,0,0,.08); padding:10px 12px; border-radius: 16px; border:1px solid rgba(255,255,255,.14);">
+            *Edición limitada. Recomendamos confirmar tu talla cuanto antes.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<section class="section">
+  <!-- COMO FUNCIONA -->
+  <section id="como-funciona">
+    <div class="container">
+      <div class="steps">
+        <h2 class="section-title" style="margin-top:0;">Pago contra entrega: fácil y seguro</h2>
+        <p class="section-sub">
+          Tú eliges talla, envías tu pedido y recibes en la dirección indicada. Paga cuando lo tengas en tus manos.
+        </p>
 
-<h2 class="title">DETALLES QUE HACEN LA DIFERENCIA</h2>
+        <div class="steps-grid">
+          <div class="step">
+            <div class="n">1</div>
+            <h3>Elige tu talla</h3>
+            <p>Selecciona S, M, L o XL en el formulario de pedido.</p>
+          </div>
+          <div class="step">
+            <div class="n">2</div>
+            <h3>Envíanos tus datos</h3>
+            <p>Nombre, teléfono y dirección para coordinar la entrega.</p>
+          </div>
+          <div class="step">
+            <div class="n">3</div>
+            <h3>Recibe y paga</h3>
+            <p>Pago contra entrega al momento de recibir tu camisa.</p>
+          </div>
+        </div>
 
-<div class="gallery">
+        <div style="height:14px"></div>
 
-<img src="imagen2.jpg" alt="Detalles Camisa">
-<img src="imagen3.jpg" alt="Camisa Colombia">
+        <div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center;">
+          <a class="btn btn-primary" href="#ordenar">✅ Hacer mi pedido ahora</a>
+          <a class="btn btn-outline" href="#ordenar">📦 Ver envío y confirmar talla</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-</div>
+  <!-- ORDER -->
+  <section id="ordenar">
+    <div class="container">
+      <div class="order-wrap">
+        <div style="display:flex; align-items:flex-end; justify-content:space-between; gap:12px; flex-wrap:wrap;">
+          <div>
+            <h2 class="section-title" style="margin-top:0;">Ordena tu Camisa Colombia Edición Nobel™</h2>
+            <p class="section-sub" style="margin-bottom:0;">
+              Oferta: <b>Antes $150.000</b> → <b>$99.900</b>. <b>Pago contra entrega</b>.
+            </p>
+          </div>
+          <div style="display:flex; gap:10px; flex-wrap:wrap;">
+            <a class="btn btn-outline" href="#detalles">👀 Detalles</a>
+            <a class="btn btn-primary" href="#ordenar">🔥 Confirmar pedido</a>
+          </div>
+        </div>
 
-</section>
+        <div style="height:14px"></div>
 
-<section class="section highlight">
+        <div class="order-grid">
+          <!-- Form -->
+          <form class="form" id="orderForm" autocomplete="on">
+            <h2>Formulario de pedido</h2>
+            <p>
+              Envia el pedido y te generamos un <b>código</b>. Te contactamos para confirmar talla y coordinar la entrega con pago contra entrega.
+            </p>
 
-<div class="container">
+            <div class="field-row">
+              <div class="field">
+                <label for="name">Nombre completo</label>
+                <input id="name" name="name" type="text" placeholder="Ej: Juan Pérez" required />
+              </div>
+              <div class="field">
+                <label for="phone">Teléfono / WhatsApp</label>
+                <input id="phone" name="phone" type="tel" placeholder="Ej: +57 300 123 4567" required />
+              </div>
+            </div>
 
-<h2>DISEÑADA PARA GANADORES 🏆</h2>
+            <div class="field-row">
+              <div class="field">
+                <label for="city">Ciudad</label>
+                <input id="city" name="city" type="text" placeholder="Ej: Bogotá" required />
+              </div>
+              <div class="field">
+                <label for="address">Dirección de entrega</label>
+                <input id="address" name="address" type="text" placeholder="Calle, carrera, barrio" required />
+              </div>
+            </div>
 
-<p>
-Ideal para partidos, entrenamientos, reuniones familiares, viajes y para demostrar tu orgullo colombiano en cualquier lugar.
-</p>
+            <div class="field">
+              <label>Elige tu talla</label>
+              <div class="size-grid" role="radiogroup" aria-label="Tallas">
+                <div class="size" data-size="S" role="radio" aria-checked="false" tabindex="0">S</div>
+                <div class="size" data-size="M" role="radio" aria-checked="false" tabindex="0">M</div>
+                <div class="size" data-size="L" role="radio" aria-checked="false" tabindex="0">L</div>
+                <div class="size" data-size="XL" role="radio" aria-checked="false" tabindex="0">XL</div>
+              </div>
+              <input type="hidden" name="size" id="size" required />
+            </div>
 
-<br><br>
+            <div class="field">
+              <label>Cantidad</label>
+              <div class="qty-row">
+                <input id="qty" name="qty" type="number" min="1" max="10" value="1" required />
+                <div style="color:#6b7280; font-weight:900; font-size:12.5px;">Máx. 10</div>
+              </div>
+            </div>
 
-<a class="btn" href="https://wa.me/57TU_NUMERO?text=Hola,%20quiero%20comprar%20la%20Camisa%20Premium%20Colombia%20Edición%20Nobel">
-🔥 COMPRAR AHORA
-</a>
+            <div class="field">
+              <label for="note">Observaciones (opcional)</label>
+              <textarea id="note" name="note" placeholder="Ej: entrega en portería, horario, etc."></textarea>
+            </div>
 
-</div>
+            <div class="form-actions">
+              <button class="btn btn-primary" type="submit">✅ Enviar pedido (COD)</button>
+              <a class="btn btn-outline" href="#beneficios">↩️ Revisar beneficios</a>
+            </div>
 
-</section>
+            <div class="small-note">
+              Al enviar aceptas que te contactemos para confirmar datos y coordinar la entrega con pago contra entrega.
+            </div>
+          </form>
 
-<section class="section">
+          <!-- Summary -->
+          <aside class="summary" aria-label="Resumen de tu pedido">
+            <h3>Resumen</h3>
 
-<h2 class="title">¿POR QUÉ COMPRAR HOY?</h2>
+            <div class="sum-line">
+              <span>Producto</span>
+              <span>Camisa Colombia Edición Nobel™</span>
+            </div>
+            <div class="sum-line">
+              <span>Talla</span>
+              <span id="sumSize">—</span>
+            </div>
+            <div class="sum-line">
+              <span>Cantidad</span>
+              <span id="sumQty">1</span>
+            </div>
+            <div class="sum-line">
+              <span>Precio unitario</span>
+              <span>$99.900</span>
+            </div>
 
-<div class="benefits-list">
+            <div class="divider"></div>
 
-<div class="benefit">✅ Pago Contra Entrega</div>
-<div class="benefit">✅ Envíos a Toda Colombia</div>
-<div class="benefit">✅ Escudo Bordado Premium</div>
-<div class="benefit">✅ Tela Suave y Cómoda</div>
-<div class="benefit">✅ Costuras Reforzadas</div>
-<div class="benefit">✅ Oferta por Tiempo Limitado</div>
+            <div class="sum-line sum-total">
+              <span>Total</span>
+              <span id="sumTotal">$99.900</span>
+            </div>
 
-</div>
+            <div class="sum-badge">
+              🔥 <b>Oferta activa:</b> $99.900 (antes $150.000).<br/>
+              💳 <b>Pago contra entrega</b> al recibir.
+            </div>
 
-</section>
+            <div style="height:14px"></div>
 
-<section class="section offer">
+            <a class="btn btn-outline" style="width:100%;" href="#ordenar">
+              🚀 Continuar y enviar pedido
+            </a>
 
-<div class="cta-box">
+            <div style="height:12px"></div>
 
-<h2>ÚLTIMAS UNIDADES DISPONIBLES</h2>
+            <div class="small-note" style="color: rgba(255,255,255,.78); font-size:12.5px;">
+              *El código de pedido se genera en tu navegador al enviar el formulario.
+            </div>
+          </aside>
+        </div>
 
-<p style="font-size:22px;margin:20px 0;">
-La promoción finaliza pronto.
-</p>
+        <!-- Success -->
+        <div class="success" id="successBox">
+          <h2>🎉 Pedido enviado correctamente</h2>
+          <p>
+            Ya generamos tu código de seguimiento. Guarda el código y te contactamos para confirmar talla y coordinar la entrega con <b>pago contra entrega</b>.
+          </p>
 
-<div class="old-price">$150.000</div>
-<div class="new-price">$99.900</div>
+          <div class="order-code">
+            <div>
+              <div style="font-size:12.5px; color:#6b7280; font-weight:900;">Tu código:</div>
+              <div style="font-size:18px; color:#111827; font-weight:1300;" id="orderCode">—</div>
+            </div>
+            <div style="display:flex; gap:10px; flex-wrap:wrap;">
+              <button type="button" class="btn btn-outline" id="copyCodeBtn">📋 Copiar código</button>
+            </div>
+          </div>
 
-<p style="margin-top:20px;font-size:20px;">
-🚚 Pago Contra Entrega Disponible
-</p>
+          <div style="height:10px"></div>
 
-<a class="btn" href="https://wa.me/57TU_NUMERO?text=Hola,%20quiero%20comprar%20la%20Camisa%20Premium%20Colombia%20Edición%20Nobel">
-⚽ PEDIR AHORA
-</a>
+          <div style="background: rgba(0,56,147,.07); border:1px solid rgba(0,56,147,.20); padding:12px; border-radius: 16px;">
+            <div style="font-weight:1100; color:#111827;">Resumen</div>
+            <div style="margin-top:8px; color:#374151; font-weight:900; line-height:1.6; font-size:13.5px;" id="summaryText">
+              —
+            </div>
+          </div>
 
-</div>
+          <div style="height:12px"></div>
 
-</section>
+          <div class="form-actions">
+            <a class="btn btn-primary" href="#ordenar">✅ Hacer otro pedido</a>
+          </div>
+        </div>
 
-<footer class="footer">
+      </div>
+    </div>
+  </section>
 
-<h3>CAMISA PREMIUM COLOMBIA EDICIÓN NOBEL 🇨🇴</h3>
+  <footer>
+    © <span id="year"></span> Camisa Colombia Edición Nobel™ • Hecha para representar con orgullo.
+  </footer>
 
-<p>
-Oferta válida hasta agotar existencias.
-</p>
+  <!-- Floating CTA -->
+  <div class="floating" aria-label="CTA flotante">
+    <div class="pill">
+      <div style="font-size:18px;">🔥</div>
+      <div>
+        <strong>$99.900</strong>
+        <span>pago contra entrega</span>
+      </div>
+    </div>
+    <a class="btn btn-primary" href="#ordenar" style="padding:14px 16px;">Ordenar</a>
+  </div>
 
-</footer>
+  <script>
+    // Año
+    document.getElementById('year').textContent = new Date().getFullYear();
 
+    // Cuenta regresiva (demo): 24h desde que se carga la página
+    (function countdown(){
+      const end = Date.now() + 24*60*60*1000; // 24 horas
+      const hEl = document.getElementById('t-h');
+      const mEl = document.getElementById('t-m');
+      const sEl = document.getElementById('t-s');
+
+      function pad(n){ return String(n).padStart(2,'0'); }
+
+      function tick(){
+        const now = Date.now();
+        const diff = Math.max(0, end - now);
+        const totalSec = Math.floor(diff/1000);
+        const h = Math.floor(totalSec/3600);
+        const m = Math.floor((totalSec%3600)/60);
+        const s = totalSec%60;
+
+        hEl.textContent = pad(h);
+        mEl.textContent = pad(m);
+        sEl.textContent = pad(s);
+
+        if(diff <= 0){
+          // Cuando termina, mantenemos valores en 00
+          hEl.textContent = "00"; mEl.textContent = "00"; sEl.textContent = "00";
+          return;
+        }
+        requestAnimationFrame(()=>{});
+      }
+      tick();
+      setInterval(tick, 1000);
+    })();
+
+    // Selección talla (chips)
+    const sizeButtons = Array.from(document.querySelectorAll('.size'));
+    const sizeHidden = document.getElementById('size');
+
+    function setSize(size){
+      sizeHidden.value = size;
+      sizeButtons.forEach(b=>{
+        const active = b.getAttribute('data-size') === size;
+        b.classList.toggle('active', active);
+        b.setAttribute('aria-checked', active ? 'true' : 'false');
+      });
+      updateSummary();
+    }
+
+    sizeButtons.forEach(btn=>{
+      btn.addEventListener('click', ()=> setSize(btn.getAttribute('data-size')));
+      btn.addEventListener('keydown', (e)=>{
+        if(e.key === 'Enter' || e.key === ' '){
+          e.preventDefault();
+          setSize(btn.getAttribute('data-size'));
+        }
+      });
+    });
+
+    // Resumen dinámico
+    const qtyEl = document.getElementById('qty');
+    const sumSizeEl = document.getElementById('sumSize');
+    const sumQtyEl = document.getElementById('sumQty');
+    const sumTotalEl = document.getElementById('sumTotal');
+    const UNIT = 99900;
+
+    function formatCOP(n){
+      return n.toLocaleString('es-CO', { style:'currency', currency:'COP', maximumFractionDigits:0 });
+    }
+
+    function updateSummary(){
+      const size = sizeHidden.value || '—';
+      const qty = Math.max(1, parseInt(qtyEl.value || '1', 10));
+      const total = UNIT * qty;
+
+      sumSizeEl.textContent = size;
+      sumQtyEl.textContent = String(qty);
+      sumTotalEl.textContent = formatCOP(total);
+    }
+
+    qtyEl.addEventListener('input', updateSummary);
+    updateSummary();
+
+    // Form submit: generar código y mostrar success
+    const form = document.getElementById('orderForm');
+    const successBox = document.getElementById('successBox');
+    const orderCodeEl = document.getElementById('orderCode');
+    const summaryTextEl = document.getElementById('summaryText');
+    const copyBtn = document.getElementById('copyCodeBtn');
+
+    let lastOrderCode = null;
+
+    form.addEventListener('submit', (e)=>{
+      e.preventDefault();
+
+      // Validaciones mínimas
+      const size = sizeHidden.value;
+      const qty = Math.max(1, parseInt(qtyEl.value || '1', 10));
+
+      if(!size){
+        alert('Por favor selecciona tu talla.');
+        return;
+      }
+
+      // Capturar datos
+      const data = {
+        name: document.getElementById('name').value.trim(),
+        phone: document.getElementById('phone').value.trim(),
+        city: document.getElementById('city').value.trim(),
+        address: document.getElementById('address').value.trim(),
+        size,
+        qty,
+        note: document.getElementById('note').value.trim()
+      };
+
+      // Generar código único (local)
+      const date = new Date();
+      const y = date.getFullYear();
+      const mo = String(date.getMonth()+1).padStart(2,'0');
+      const d = String(date.getDate()).padStart(2,'0');
+      const rand = Math.floor(Math.random()*9000)+1000;
+      const code = `COD-${y}${mo}${d}-${rand}`;
+
+      lastOrderCode = code;
+
+      // Resumen de texto
+      const total = UNIT * qty;
+      const lines = [
+        `Código: ${code}`,
+        `Cliente: ${data.name}`,
+        `Teléfono: ${data.phone}`,
+        `Ciudad: ${data.city}`,
+        `Dirección: ${data.address}`,
+        `Talla: ${data.size}`,
+        `Cantidad: ${data.qty}`,
+        `Total: ${formatCOP(total)}`,
+        `Pago: Pago contra entrega`,
+        data.note ? `Observaciones: ${data.note}` : `Observaciones: —`
+      ];
+      summaryTextEl.textContent = lines.join('\n');
+
+      // Mostrar success
+      form.style.display = 'none';
+      successBox.classList.add('active');
+      orderCodeEl.textContent = code;
+
+      // Guardar en localStorage (opcional)
+      try{
+        const orders = JSON.parse(localStorage.getItem('orders_cod') || '[]');
+        orders.push({ code, data, createdAt: new Date().toISOString() });
+        localStorage.setItem('orders_cod', JSON.stringify(orders).slice ? orders : orders);
+      }catch(err){
+        // no-op
+      }
+
+      // Scroll suave al success
+      successBox.scrollIntoView({behavior:'smooth', block:'center'});
+    });
+
+    // Copiar código
+    copyBtn.addEventListener('click', async ()=>{
+      if(!lastOrderCode) return;
+      try{
+        await navigator.clipboard.writeText(lastOrderCode);
+        copyBtn.textContent = "✅ Código copiado";
+        setTimeout(()=> copyBtn.textContent = "📋 Copiar código", 1600);
+      }catch(err){
+        alert('No se pudo copiar automáticamente. Código: ' + lastOrderCode);
+      }
+    });
+  </script>
 </body>
 </html>
