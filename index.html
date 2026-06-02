@@ -1,389 +1,472 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Camisa Premium Colombia Edición Nobel</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, Helvetica, sans-serif;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Camisa Premium Colombia Edición Nobel</title>
 
-    body {
-      background: #fff;
-      color: #111;
-      line-height: 1.6;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800;900&display=swap" rel="stylesheet">
 
-    .hero {
-      background: linear-gradient(135deg, #ffd600 0%, #ffef7a 50%, #ffffff 100%);
-      padding: 50px 20px;
-    }
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Montserrat',sans-serif;
+}
 
-    .container {
-      max-width: 1150px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 40px;
-      align-items: center;
-    }
+body{
+background:#fff;
+color:#222;
+overflow-x:hidden;
+}
 
-    .hero-text h1 {
-      font-size: 42px;
-      line-height: 1.1;
-      color: #0b3d91;
-      margin-bottom: 20px;
-    }
+.hero{
+background:linear-gradient(135deg,#001c54,#002f87);
+color:white;
+padding:40px 20px;
+}
 
-    .hero-text h2 {
-      font-size: 22px;
-      color: #d71920;
-      margin-bottom: 15px;
-    }
+.container{
+max-width:1200px;
+margin:auto;
+}
 
-    .hero-text p {
-      font-size: 18px;
-      margin-bottom: 20px;
-    }
+.hero-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+}
 
-    .price-box {
-      background: #ffffff;
-      border-radius: 14px;
-      padding: 20px;
-      margin: 25px 0;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.12);
-      display: inline-block;
-    }
+.hero h1{
+font-size:60px;
+font-weight:900;
+line-height:1;
+margin-bottom:15px;
+}
 
-    .old-price {
-      font-size: 20px;
-      color: #777;
-      text-decoration: line-through;
-    }
+.hero h1 span{
+color:#ffd400;
+}
 
-    .new-price {
-      font-size: 38px;
-      font-weight: bold;
-      color: #d71920;
-    }
+.hero p{
+font-size:20px;
+margin-bottom:25px;
+}
 
-    .discount {
-      background: #d71920;
-      color: #fff;
-      padding: 6px 12px;
-      border-radius: 30px;
-      font-size: 14px;
-      display: inline-block;
-      margin-top: 8px;
-    }
+.price-box{
+background:white;
+padding:20px;
+border-radius:15px;
+display:inline-block;
+margin-bottom:25px;
+}
 
-    .cta {
-      display: inline-block;
-      background: #0b3d91;
-      color: #fff;
-      text-decoration: none;
-      padding: 18px 34px;
-      border-radius: 50px;
-      font-size: 20px;
-      font-weight: bold;
-      transition: 0.3s;
-      box-shadow: 0 8px 20px rgba(11,61,145,0.35);
-    }
+.old-price{
+font-size:24px;
+text-decoration:line-through;
+color:#888;
+}
 
-    .cta:hover {
-      background: #072b66;
-      transform: translateY(-2px);
-    }
+.new-price{
+font-size:48px;
+font-weight:900;
+color:#e30613;
+}
 
-    .hero-image img {
-      width: 100%;
-      max-width: 480px;
-      display: block;
-      margin: auto;
-      border-radius: 20px;
-      background: #fff;
-      padding: 15px;
-      box-shadow: 0 10px 35px rgba(0,0,0,0.18);
-    }
+.discount{
+background:#e30613;
+color:white;
+padding:8px 15px;
+border-radius:50px;
+display:inline-block;
+font-weight:700;
+margin-top:10px;
+}
 
-    .badges {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      margin-top: 20px;
-    }
+.btn{
+display:inline-block;
+padding:18px 35px;
+background:#ffd400;
+color:#001c54;
+font-size:22px;
+font-weight:900;
+text-decoration:none;
+border-radius:60px;
+transition:.3s;
+margin-top:15px;
+}
 
-    .badge {
-      background: #fff;
-      border: 2px solid #0b3d91;
-      color: #0b3d91;
-      padding: 8px 14px;
-      border-radius: 30px;
-      font-weight: bold;
-      font-size: 14px;
-    }
+.btn:hover{
+transform:scale(1.05);
+}
 
-    section {
-      padding: 60px 20px;
-    }
+.hero img{
+width:100%;
+border-radius:20px;
+}
 
-    .section-title {
-      text-align: center;
-      font-size: 34px;
-      color: #0b3d91;
-      margin-bottom: 20px;
-    }
+.badges{
+background:#ffd400;
+padding:15px;
+text-align:center;
+font-weight:800;
+color:#001c54;
+font-size:18px;
+}
 
-    .section-subtitle {
-      text-align: center;
-      max-width: 750px;
-      margin: 0 auto 40px;
-      font-size: 18px;
-      color: #333;
-    }
+.badges span{
+margin:0 15px;
+display:inline-block;
+}
 
-    .benefits {
-      max-width: 1000px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-    }
+.section{
+padding:70px 20px;
+}
 
-    .benefit {
-      background: #f8f8f8;
-      border-radius: 16px;
-      padding: 25px;
-      text-align: center;
-      border-bottom: 5px solid #ffd600;
-    }
+.title{
+text-align:center;
+font-size:42px;
+font-weight:900;
+color:#001c54;
+margin-bottom:20px;
+}
 
-    .benefit h3 {
-      color: #d71920;
-      margin-bottom: 10px;
-      font-size: 20px;
-    }
+.subtitle{
+text-align:center;
+max-width:900px;
+margin:auto;
+font-size:20px;
+margin-bottom:50px;
+}
 
-    .story {
-      background: #0b3d91;
-      color: #fff;
-      text-align: center;
-    }
+.features{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:25px;
+}
 
-    .story p {
-      max-width: 850px;
-      margin: auto;
-      font-size: 20px;
-    }
+.feature{
+background:#f8f8f8;
+padding:25px;
+border-radius:15px;
+text-align:center;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
 
-    .urgency {
-      background: #ffd600;
-      text-align: center;
-    }
+.feature h3{
+color:#e30613;
+margin-bottom:10px;
+}
 
-    .urgency h2 {
-      color: #d71920;
-      font-size: 32px;
-      margin-bottom: 15px;
-    }
+.gallery{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:25px;
+}
 
-    .order-box {
-      max-width: 650px;
-      margin: auto;
-      background: #fff;
-      border-radius: 18px;
-      padding: 35px;
-      box-shadow: 0 10px 35px rgba(0,0,0,0.15);
-      text-align: center;
-    }
+.gallery img{
+width:100%;
+border-radius:20px;
+box-shadow:0 8px 20px rgba(0,0,0,.15);
+}
 
-    .order-box h2 {
-      color: #0b3d91;
-      font-size: 30px;
-      margin-bottom: 15px;
-    }
+.highlight{
+background:#001c54;
+color:white;
+text-align:center;
+}
 
-    .order-box ul {
-      list-style: none;
-      margin: 25px 0;
-      text-align: left;
-    }
+.highlight h2{
+color:#ffd400;
+font-size:50px;
+margin-bottom:20px;
+}
 
-    .order-box ul li {
-      margin-bottom: 12px;
-      font-size: 18px;
-    }
+.highlight p{
+max-width:900px;
+margin:auto;
+font-size:22px;
+}
 
-    .footer {
-      background: #111;
-      color: #fff;
-      text-align: center;
-      padding: 25px 15px;
-      font-size: 14px;
-    }
+.benefits-list{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:20px;
+max-width:1000px;
+margin:auto;
+}
 
-    @media(max-width: 850px) {
-      .container {
-        grid-template-columns: 1fr;
-        text-align: center;
-      }
+.benefit{
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+font-size:18px;
+font-weight:600;
+}
 
-      .hero-text h1 {
-        font-size: 34px;
-      }
+.offer{
+background:#ffd400;
+text-align:center;
+}
 
-      .benefits {
-        grid-template-columns: repeat(2, 1fr);
-      }
+.offer h2{
+font-size:60px;
+color:#e30613;
+font-weight:900;
+}
 
-      .badges {
-        justify-content: center;
-      }
-    }
+.offer .new-price{
+font-size:70px;
+}
 
-    @media(max-width: 550px) {
-      .benefits {
-        grid-template-columns: 1fr;
-      }
+.cta-box{
+background:white;
+max-width:700px;
+margin:auto;
+padding:40px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
 
-      .hero-text h1 {
-        font-size: 30px;
-      }
+.footer{
+background:#111;
+color:white;
+padding:30px;
+text-align:center;
+}
 
-      .new-price {
-        font-size: 32px;
-      }
-    }
-  </style>
+.sticky-btn{
+position:fixed;
+bottom:15px;
+left:50%;
+transform:translateX(-50%);
+background:#25D366;
+color:white;
+padding:15px 30px;
+border-radius:50px;
+font-weight:900;
+text-decoration:none;
+z-index:999;
+box-shadow:0 5px 20px rgba(0,0,0,.3);
+}
+
+@media(max-width:768px){
+
+.hero-grid{
+grid-template-columns:1fr;
+}
+
+.hero h1{
+font-size:40px;
+}
+
+.features{
+grid-template-columns:1fr;
+}
+
+.gallery{
+grid-template-columns:1fr;
+}
+
+.benefits-list{
+grid-template-columns:1fr;
+}
+
+.offer h2{
+font-size:40px;
+}
+
+.offer .new-price{
+font-size:50px;
+}
+}
+</style>
 </head>
+
 <body>
 
-  <!-- HERO -->
-  <header class="hero">
-    <div class="container">
-      <div class="hero-text">
-        <h2>🔥 Rumbo al Mundial 2026 🇨🇴</h2>
-        <h1>Camisa Premium Colombia Edición Nobel</h1>
-        <p>
-          Cuando juega Colombia, no es solo fútbol. Es pasión, orgullo y la ilusión
-          de millones de corazones alentando por la gloria.
-        </p>
+<a class="sticky-btn" href="https://wa.me/57TU_NUMERO?text=Hola,%20quiero%20comprar%20la%20Camisa%20Premium%20Colombia%20Edición%20Nobel">
+📲 PEDIR POR WHATSAPP
+</a>
 
-        <div class="price-box">
-          <div class="old-price">Antes: $150.000</div>
-          <div class="new-price">Ahora: $99.900</div>
-          <div class="discount">Oferta especial por tiempo limitado</div>
-        </div>
+<section class="hero">
 
-        <br />
-        <a href="#comprar" class="cta">Comprar ahora</a>
+<div class="container">
 
-        <div class="badges">
-          <span class="badge">Tela premium</span>
-          <span class="badge">Edición limitada</span>
-          <span class="badge">Diseño exclusivo</span>
-        </div>
-      </div>
+<div class="hero-grid">
 
-      <div class="hero-image">
-        <!-- Cambia esta ruta por la URL real de tu imagen -->
-        <img src="URL-DE-LA-IMAGEN-DEL-PRODUCTO.jpg" alt="Camisa Premium Colombia Edición Nobel">
-      </div>
-    </div>
-  </header>
+<div>
 
-  <!-- BENEFICIOS -->
-  <section>
-    <h2 class="section-title">Lleva el orgullo de Colombia en cada partido</h2>
-    <p class="section-subtitle">
-      La Camisa Premium Colombia Edición Nobel fue creada para verdaderos aficionados:
-      quienes sienten los colores de la patria, celebran cada gol y viven cada encuentro
-      con el corazón.
-    </p>
+<div style="background:#e30613;padding:10px 20px;border-radius:50px;display:inline-block;font-weight:800;margin-bottom:20px;">
+🔥 OFERTA MUNDIALISTA LIMITADA
+</div>
 
-    <div class="benefits">
-      <div class="benefit">
-        <h3>✅ Diseño exclusivo</h3>
-        <p>Una edición especial para destacar dentro y fuera de la cancha.</p>
-      </div>
+<h1>
+CAMISA PREMIUM<br>
+<span>COLOMBIA</span><br>
+EDICIÓN NOBEL 🇨🇴
+</h1>
 
-      <div class="benefit">
-        <h3>✅ Tela fresca</h3>
-        <p>Material cómodo, liviano y perfecto para usar durante todo el día.</p>
-      </div>
+<p>
+Vive cada partido con orgullo. Diseñada para los verdaderos aficionados que sienten a Colombia en el corazón.
+</p>
 
-      <div class="benefit">
-        <h3>✅ Ideal para partidos</h3>
-        <p>Perfecta para ver a Colombia, viajar, compartir en familia o salir con estilo.</p>
-      </div>
+<div class="price-box">
+<div class="old-price">$150.000</div>
+<div class="new-price">$99.900</div>
+<div class="discount">AHORRA $50.100</div>
+</div>
 
-      <div class="benefit">
-        <h3>✅ Edición limitada</h3>
-        <p>Una prenda pensada para verdaderos hinchas que quieren algo diferente.</p>
-      </div>
-    </div>
-  </section>
+<p>
+✅ Pago Contra Entrega<br>
+✅ Envíos a Toda Colombia<br>
+✅ Calidad Premium Garantizada
+</p>
 
-  <!-- HISTORIA / EMOCIÓN -->
-  <section class="story">
-    <h2 class="section-title" style="color:#ffd600;">Una camisa para sentir la patria</h2>
-    <p>
-      Inspirada en la grandeza de nuestra cultura y en el espíritu que une a todo un país,
-      esta edición especial te permite apoyar a Colombia con identidad, estilo y orgullo.
-      Porque cada partido es una historia, cada gol una celebración y cada hincha parte
-      de la ilusión mundialista.
-    </p>
-  </section>
+<a class="btn" href="https://wa.me/57TU_NUMERO?text=Hola,%20quiero%20comprar%20la%20Camisa%20Premium%20Colombia%20Edición%20Nobel">
+⚽ QUIERO LA MÍA AHORA
+</a>
 
-  <!-- URGENCIA -->
-  <section class="urgency">
-    <h2>⚽ Prepárate para alentar a Colombia</h2>
-    <p style="font-size:19px; max-width:750px; margin:auto;">
-      Este Mundial será inolvidable. No te quedes sin la tuya y vive cada emoción
-      con la camisa que representa tu pasión por Colombia.
-    </p>
-  </section>
+</div>
 
-  <!-- COMPRA -->
-  <section id="comprar">
-    <div class="order-box">
-      <h2>Haz tu pedido hoy</h2>
-      <p>
-        Aprovecha el precio especial de lanzamiento y recibe tu
-        <strong>Camisa Premium Colombia Edición Nobel</strong>.
-      </p>
+<div>
+<img src="imagen1.jpg" alt="Camisa Colombia">
+</div>
 
-      <div class="price-box">
-        <div class="old-price">Antes: $150.000</div>
-        <div class="new-price">Hoy: $99.900</div>
-        <div class="discount">Ahorras $50.100</div>
-      </div>
+</div>
 
-      <ul>
-        <li>🇨🇴 Producto ideal para hinchas de Colombia</li>
-        <li>🔥 Edición limitada</li>
-        <li>👕 Tela cómoda y fresca</li>
-        <li>⚽ Perfecta para el camino al Mundial 2026</li>
-      </ul>
+</div>
 
-      <!-- Cambia el enlace por tu WhatsApp, checkout o formulario -->
-      <a 
-        class="cta" 
-        href="https://wa.me/57XXXXXXXXXX?text=Hola,%20quiero%20comprar%20la%20Camisa%20Premium%20Colombia%20Edición%20Nobel"
-        target="_blank">
-        Quiero la mía ahora
-      </a>
-    </div>
-  </section>
+</section>
 
-  <footer class="footer">
-    <p>© 2026 Camisa Premium Colombia Edición Nobel. Todos los derechos reservados.</p>
-    <p>Oferta válida hasta agotar existencias.</p>
-  </footer>
+<div class="badges">
+<span>✅ Pago Contra Entrega</span>
+<span>✅ Tela Premium</span>
+<span>✅ Escudo Bordado</span>
+<span>✅ Envío Nacional</span>
+</div>
+
+<section class="section">
+
+<h2 class="title">MÁS QUE UNA CAMISETA, ES TU IDENTIDAD</h2>
+
+<p class="subtitle">
+Cuando juega Colombia no es solo fútbol. Es emoción, orgullo, pasión y la ilusión de millones de colombianos que sueñan con la gloria.
+</p>
+
+<div class="features">
+
+<div class="feature">
+<h3>⚽ Diseño Exclusivo</h3>
+<p>Inspirado en la pasión de todo un país.</p>
+</div>
+
+<div class="feature">
+<h3>🔥 Tela Transpirable</h3>
+<p>Máxima frescura y comodidad.</p>
+</div>
+
+<div class="feature">
+<h3>🏆 Calidad Premium</h3>
+<p>Material resistente y duradero.</p>
+</div>
+
+<div class="feature">
+<h3>🇨🇴 Edición Especial</h3>
+<p>Perfecta para verdaderos aficionados.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 class="title">DETALLES QUE HACEN LA DIFERENCIA</h2>
+
+<div class="gallery">
+
+<img src="imagen2.jpg" alt="Detalles Camisa">
+<img src="imagen3.jpg" alt="Camisa Colombia">
+
+</div>
+
+</section>
+
+<section class="section highlight">
+
+<div class="container">
+
+<h2>DISEÑADA PARA GANADORES 🏆</h2>
+
+<p>
+Ideal para partidos, entrenamientos, reuniones familiares, viajes y para demostrar tu orgullo colombiano en cualquier lugar.
+</p>
+
+<br><br>
+
+<a class="btn" href="https://wa.me/57TU_NUMERO?text=Hola,%20quiero%20comprar%20la%20Camisa%20Premium%20Colombia%20Edición%20Nobel">
+🔥 COMPRAR AHORA
+</a>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 class="title">¿POR QUÉ COMPRAR HOY?</h2>
+
+<div class="benefits-list">
+
+<div class="benefit">✅ Pago Contra Entrega</div>
+<div class="benefit">✅ Envíos a Toda Colombia</div>
+<div class="benefit">✅ Escudo Bordado Premium</div>
+<div class="benefit">✅ Tela Suave y Cómoda</div>
+<div class="benefit">✅ Costuras Reforzadas</div>
+<div class="benefit">✅ Oferta por Tiempo Limitado</div>
+
+</div>
+
+</section>
+
+<section class="section offer">
+
+<div class="cta-box">
+
+<h2>ÚLTIMAS UNIDADES DISPONIBLES</h2>
+
+<p style="font-size:22px;margin:20px 0;">
+La promoción finaliza pronto.
+</p>
+
+<div class="old-price">$150.000</div>
+<div class="new-price">$99.900</div>
+
+<p style="margin-top:20px;font-size:20px;">
+🚚 Pago Contra Entrega Disponible
+</p>
+
+<a class="btn" href="https://wa.me/57TU_NUMERO?text=Hola,%20quiero%20comprar%20la%20Camisa%20Premium%20Colombia%20Edición%20Nobel">
+⚽ PEDIR AHORA
+</a>
+
+</div>
+
+</section>
+
+<footer class="footer">
+
+<h3>CAMISA PREMIUM COLOMBIA EDICIÓN NOBEL 🇨🇴</h3>
+
+<p>
+Oferta válida hasta agotar existencias.
+</p>
+
+</footer>
 
 </body>
 </html>
